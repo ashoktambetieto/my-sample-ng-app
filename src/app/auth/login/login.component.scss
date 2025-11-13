@@ -1,0 +1,17 @@
+.form-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20px;
+  align-items: center;
+
+  mat-form-field {
+    width: 70%;
+  }
+
+  .login-button {
+    display: flex;
+    justify-content: flex-end;
+    width: 70%;
+  }
+}

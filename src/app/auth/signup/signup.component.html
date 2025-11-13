@@ -1,0 +1,77 @@
+<section class="form-container">
+  <form #f="ngForm" (ngSubmit)="onFormSubmit(f)">
+    <div class="control-container">
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Email"
+          type="email"
+          ngModel
+          name="email"
+          email
+          required
+          #emailInput="ngModel"
+        />
+        <mat-error *ngIf="emailInput.hasError('required')"
+          >Email id is required</mat-error
+        >
+        <mat-error *ngIf="!emailInput.hasError('required')"
+          >Enter valid email address</mat-error
+        >
+      </mat-form-field>
+      <mat-form-field hintLabel="At least 6 characters">
+        <input
+          matInput
+          placeholder="Password"
+          type="password"
+          ngModel
+          name="password"
+          required
+          minlength="6"
+          #pwInput="ngModel"
+        />
+        <mat-hint align="end">{{ pwInput.value?.length }} /6</mat-hint>
+        <mat-error>Has to be atleast 6 characters long.</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Birth date</mat-label>
+        <input
+          matInput
+          [matDatepicker]="picker"
+          [max]="maxDate"
+          ngModel
+          name="dateOfBirth"
+        />
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle
+          matIconSuffix
+          [for]="picker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-checkbox labelPosition="before" required ngModel name="acceptTerms"
+        >I accept terms and conditions</mat-checkbox
+      >
+      <div class="submit-action">
+        <button
+          mat-raised-button
+          color="primary"
+          type="submit"
+          [disabled]="f.invalid"
+        >
+          Sign Up
+        </button>
+      </div>
+    </div>
+  </form>
+</section>
+
+<!-- <section>
+  <div id="container">
+    <div id="child1" class="child"></div>
+    <div id="child2" class="child"></div>
+    <div id="child3" class="child"></div>
+  </div>
+</section> -->

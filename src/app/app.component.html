@@ -1,0 +1,46 @@
+<mat-sidenav-container>
+  <mat-sidenav #sideNav>
+    <mat-list>
+      <a mat-list-item routerLink="/signup" (click)="sideNav.toggle()">
+        <div class="nav-caption">
+          <mat-icon> face </mat-icon> <span>Signup</span>
+        </div>
+      </a>
+
+      <a mat-list-item routerLink="/login" (click)="sideNav.toggle()">Login</a>
+
+      <a mat-list-item routerLink="/training" (click)="sideNav.toggle()"
+        >Dashboard</a
+      >
+      <mat-list-item>
+        <div class="nav-caption">
+          <button mat-icon-button (click)="sideNav.toggle()">
+            <mat-icon>logout</mat-icon>
+          </button>
+          <span>Logout</span>
+        </div>
+      </mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar>
+      <div>
+        <button mat-icon-button (click)="sideNav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+      <div>LOGO</div>
+      <div class="menu-dev">
+        <ul class="menu-section">
+          <li><a routerLink="/signup">Signup</a></li>
+          <li><a routerLink="/login">Login</a></li>
+          <li><a routerLink="/training">Dashboard</a></li>
+        </ul>
+      </div>
+    </mat-toolbar>
+
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>

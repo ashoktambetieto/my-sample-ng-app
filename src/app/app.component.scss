@@ -1,0 +1,46 @@
+mat-sidenav-container,
+mat-sidenav-content,
+mat-sidenav {
+  height: 100%;
+}
+
+mat-sidenav {
+  width: 250px;
+}
+
+mat-toolbar {
+  background-color: #673ab7;
+  color: white;
+
+  mat-icon {
+    color: aliceblue;
+  }
+}
+
+a {
+  text-decoration: none;
+  // color: aliceblue;
+}
+
+.menu-dev {
+  width: 100%;
+}
+.menu-section {
+  display: flex;
+  justify-content: flex-end;
+  a {
+    color: aliceblue;
+  }
+  li {
+    list-style-type: none;
+    margin-right: 10px;
+  }
+}
+
+.nav-caption {
+  display: flex;
+
+  span {
+    margin-left: 6px;
+  }
+}

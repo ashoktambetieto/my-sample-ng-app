@@ -1,0 +1,44 @@
+<section>
+  <form class="form-section" #form="ngForm">
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Email"
+        type="email"
+        ngModel
+        name="email"
+        required
+        email
+        #emailInput="ngModel"
+      />
+      <mat-error *ngIf="emailInput.hasError('required')">
+        Please enter a valid email</mat-error
+      >
+    </mat-form-field>
+
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Password"
+        type="password"
+        ngModel
+        name="password"
+        required
+        minlength="6"
+        #passwordInput="ngModel"
+      />
+    </mat-form-field>
+
+    <div class="login-button">
+      <button
+        type="submit"
+        mat-raised-button
+        color="primary"
+        [disabled]="!emailInput.valid || !passwordInput.valid"
+        (click)="onLogin(form)"
+      >
+        Login
+      </button>
+    </div>
+  </form>
+</section>
