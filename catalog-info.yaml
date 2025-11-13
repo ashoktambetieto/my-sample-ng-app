@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: fitness-tracker-app
+  description: A web application for tracking fitness activities.
+  # Example for optional annotations
+  annotations:
+    github.com/project-slug: aashoktambe/my-sample-ng-app
+  #   backstage.io/techdocs-ref: dir:.
+spec:
+  type: website
+  owner: development
+  lifecycle: experimental
