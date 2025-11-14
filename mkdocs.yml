@@ -1,0 +1,12 @@
+site_name: "fitness-tracker-app Documentation"
+site_description: "Main documentation for the fitness-tracker-app project."
+repo_url: https://github.com/ashoktambetieto/my-sample-ng-app
+edit_uri: edit/main/docs
+
+plugins:
+  - techdocs-core
+
+# For sidebar navigation on https://backstage.io/, see `microsite/sidebars.js`
+nav:
+  - Overview:
+      - Getting Started: "docs/index.md"
